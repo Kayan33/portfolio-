@@ -11,12 +11,54 @@
   font-size: 4.5rem;
   line-height: 1.125;
   margin-bottom: 30px;
+  position: relative;
 }
 
 .introducao p {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #525252;
 }
 
-.introducao {
+.introducao h1::before {
+  content: "";
+  height: 130px;
+  width: 125px;
+  background: url("../img/detalhe.svg") no-repeat center;
+  display: inline-block;
+  position: absolute;
+  top: -30px;
+  left: -35px;
+  z-index: -1;
+}
+
+@media (max-width: 1000px) {
+  .introducao h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .introducao {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .introducao h1 {
+    font-size: 2.5rem;
+  }
+
+  .introducao h1::before {
+    height: 10px;
+    width: 80px;
+    top: -12px;
+    left: -5px;
+  }
+}
+
+@media (max-width: 600px) {
+  .introducao img {
+    display: none;
+  }
+  .introducao {
+    grid-template-columns: 1fr;
+  }
 }
