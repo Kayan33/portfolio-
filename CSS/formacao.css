@@ -4,15 +4,27 @@
 
 .formacao-contaner {
   display: grid;
-  padding: 50px 20px;
+  padding: 120px 20px;
   max-width: 1200px;
   grid-template-columns: 1fr 2fr;
   margin: 0 auto;
   gap: 100px;
+  position: relative;
+}
+.formacao-contaner::after {
+  display: block;
+  content: "";
+  height: 130px;
+  width: 125px;
+  position: absolute;
+  background: url("../img/detalhe.svg") no-repeat center;
+  bottom: -65px;
+  z-index: 0;
 }
 
 .subtitulo-02 {
   max-width: 3.2ch;
+  word-break: break-word;
 }
 .formacao-texto {
   font-size: 1.5rem;
@@ -118,4 +130,19 @@
 .cursos span {
   justify-self: end;
   color: #8b8b8b;
+}
+@media (max-width: 800px) {
+  .formacao-contaner {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+    gap: 40px;
+  }
+  .formacao-texto {
+    font-size: 1.25rem;
+  }
+
+  .formacao-extra h3::before {
+    position: initial;
+    margin-bottom: 10px;
+  }
 }

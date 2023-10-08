@@ -24,7 +24,7 @@
   height: 130px;
   width: 125px;
   background: url("../img/detalhe.svg") no-repeat center;
-  display: inline-block;
+  display: block;
   position: absolute;
   top: -30px;
   left: -35px;
